@@ -2,36 +2,94 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 
-  form {
+  .wrapper {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    flex-direction: column;
 
-    input {
+    form {
       display: flex;
-      background: #ffffff;
-      padding: 8px 20px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
+      flex-direction: column;
+      align-items: center;
 
-      ::placeholder {
-        align-items: start;
+      h1 {
+        margin-bottom: 14px;
+      }
+
+      input {
+        display: flex;
+        background: #ffffff;
+        font-size: 20px;
+        font-family: 400;
+        padding: 8px 20px;
+        min-width: 240px;
+        margin-bottom: 14px;
+        border: 1px solid #aaaaaa;
+        border-radius: 4px;
+
+        &::placeholder {
+          color: #ccc;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+
+      button {
+        margin-bottom: 30px;
+        padding: 6px 28px;
+        font-style: 600;
+        border: 1px solid #000;
+        background: #ffffff;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+
+        &:hover {
+          background: #000000;
+          color: #ffffff;
+        }
       }
     }
-    button {
-        margin-bottom: 20px;
-    }
-  }
 
-  .user {
-    border: 1px solid rgb(0, 0, 0);
-    width: 20%;
-    margin-bottom: 20px;
-  }
-  .admin {
-    border: 1px solid rgb(0, 0, 0);
-    width: 20%;
+    .login-details {
+      display: flex;
+      gap: 32px;
+
+      div {
+        margin-bottom: 12px;
+        text-align: center;
+        min-width: 180px;
+        padding: 12px 24px;
+        opacity: 0.5;
+
+        &.user {
+          border: 1px solid #41A6FF;
+
+          span, p {
+            color: #41A6FF;
+          }
+        }
+
+        &.admin {
+          border: 1px solid #058373;
+
+          span, p {
+            color: #058373;
+          }
+        }
+
+        span {
+          margin-bottom: 12px !important;
+          display: inline-block;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
