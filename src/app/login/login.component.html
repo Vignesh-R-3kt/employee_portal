@@ -1,16 +1,25 @@
 <div class="container">
-    <form>
-    <h1>Login</h1>
-    <input class="name" type="text" placeholder="Enter your username">
-    <input class="password" type="password" placeholder="Enter your password">
-    <button type="submit">Login</button>
-</form>
-<div class="user">
-    <p>username: user</p>
-    <p>password: 123</p>
-</div>
-<div class="admin">
-    <p>username: admin</p>
-    <p>password: admin</p>
-</div>
+    <div class="wrapper">
+        <form [formGroup]="formData" (submit)="fetchLoginDetails()">
+            <h1>Login</h1>
+            <input class="name" name="username" formControlName="username" type="text"
+                placeholder="Enter your username" autocomplete="off">
+            <input class="password" name="password" formControlName="password" type="password"
+                placeholder="Enter your password" autocomplete="off">
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="login-details">
+            <div class="user">
+                <span>Employee Login</span>
+                <p>username: user</p>
+                <p>password: 123</p>
+            </div>
+            <div class="admin">
+                <span>Admin Login</span>
+                <p>username: admin</p>
+                <p>password: admin</p>
+            </div>
+        </div>
+    </div>
 </div>
